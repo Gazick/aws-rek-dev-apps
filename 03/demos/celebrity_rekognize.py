@@ -33,7 +33,9 @@ s3_resource = mySession.resource("s3")
 
 s3_resource.Bucket(BUCKET).download_file(FILE, "input.jpg")
 
-cele_rsp = rek_client.recognize_celebrities(Image={"S3Object": {"Bucket": BUCKET, "Name": FILE}})
+cele_rsp = rek_client.recognize_celebrities(
+    Image={"S3Object": {"Bucket": BUCKET, "Name": FILE}}
+)
 
 celebrityFaces = {}
 unrecognizedFaces = {}

@@ -1,0 +1,27 @@
+{
+  "JobStatus": "IN_PROGRESS",
+  "Labels": [],
+  "LabelModelVersion": "3.0",
+  "JobId": "017133b249556ff5d374c3e33ec9542f13d24c9fea6755ea691366c12c144a20",
+  "Video": {
+    "S3Object": {
+      "Bucket": "aws-rek-immersionday-gazi",
+      "Name": "media/object-detection/video_sample.mp4"
+    }
+  },
+  "GetRequestMetadata": {
+    "SortBy": "TIMESTAMP",
+    "AggregateBy": "TIMESTAMPS"
+  },
+  "ResponseMetadata": {
+    "RequestId": "22fa33a6-b118-4081-9c30-11a4942c5206",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "x-amzn-requestid": "22fa33a6-b118-4081-9c30-11a4942c5206",
+      "content-type": "application/x-amz-json-1.1",
+      "content-length": "320",
+      "date": "Tue, 30 May 2023 11:13:46 GMT"
+    },
+    "RetryAttempts": 0
+  }
+}

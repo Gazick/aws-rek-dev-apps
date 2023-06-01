@@ -46,17 +46,10 @@ At the prompts, enter your access key, secret key, region and JSON as your outpu
 
 Command Line Demo
 
-Start the anaylsis
+Start the anaylsis:
 
-aws rekognition start-label-detection --video "S3Object={Bucket="YOUR_BUCKET",Name="YOUR-VIDEO.mp4"}" \
---endpoint-url https://rekognition.eu-west-2.amazonaws.com \
---notification-channel "SNSTopicArn=YOUR_TOPIC,RoleArn=YOUR-ROLE" \
---region eu-west-2 \
---profile default
+aws rekognition start-label-detection --video "S3Object={Bucket="aws-rek-immersionday-gazi",Name="media/object-detection/video_sample.mp4"}" --endpoint-url https://rekognition.eu-west-2.amazonaws.com --notification-channel "SNSTopicArn=arn:aws:sns:eu-west-2:375990225440:recogTopic,RoleArn=arn:aws:iam::375990225440:role/rekogRole" --region eu-west-2 --profile default
 
-To retrieve the data
+To retrieve the data:
 
-aws rekognition get-label-detection  --job-id YOUR-JOB-ID \
---endpoint-url https://rekognition.eu-west-2.amazonaws.com \
---region eu-west-2 \
---profile default
+aws rekognition get-label-detection  --job-id 942f2569b24b60c1cd40376d3c4f3ac7f89eb441f66078cd22407760473652c0 --endpoint-url https://rekognition.eu-west-2.amazonaws.com --region eu-west-2 --profile default
