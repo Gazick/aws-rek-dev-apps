@@ -6,7 +6,12 @@ mySession = boto3.session.Session(profile_name="default", region_name="eu-west-2
 rek_client = mySession.client("rekognition")
 
 start_response = rek_client.start_label_detection(
-    Video={"S3Object": {"Bucket": "aws-rek-immersionday-gazi", "Name": "media/object-detection/video_sample.mp4"}},
+    Video={
+        "S3Object": {
+            "Bucket": "aws-rek-immersionday-gazi",
+            "Name": "media/object-detection/video_sample.mp4",
+        }
+    },
     NotificationChannel={
         "SNSTopicArn": "arn:aws:sns:eu-west-2:375990225440:rekogTopic",
         "RoleArn": "arn:aws:iam::375990225440:role/rekogRole",
