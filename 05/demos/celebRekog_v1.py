@@ -6,7 +6,8 @@ from PIL import ImageFont
 
 print("Loading function")
 
-s3_client = boto3.client("s3")
+session = boto3.Session(region_name="eu-west-2")
+s3_client = session.client("s3")
 
 
 def draw_box(myimage, draw, boundingBox, width, linecolor, name):
@@ -31,7 +32,7 @@ def draw_box(myimage, draw, boundingBox, width, linecolor, name):
 
 
 def run_rekognition(bucket, filename, download_path, upload_path):
-    rekog_client = boto3.client("rekognition", "eu-west-2")
+    rekog_client = session.client("rekognition")
     cele_rsp = rekog_client.recognize_celebrities(
         Image={"S3Object": {"Bucket": bucket, "Name": filename}}
     )
